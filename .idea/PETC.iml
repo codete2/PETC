@@ -6,5 +6,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="NOC" />
+    <orderEntry type="module" module-name="XMP512" />
+    <orderEntry type="module" module-name="XMWProject" />
   </component>
 </module>

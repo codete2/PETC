@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PETCTrans\n"
+"POT-Creation-Date: 2024-05-18 21:46+0800\n"
+"PO-Revision-Date: 2024-05-18 21:49+0800\n"
+"Last-Translator: \n"
+"Language-Team: CODETE\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: main.py:45
+msgid "提示:"
+msgstr ""
+
+#: main.py:46
+msgid "1. 本游戏有20关, 请确保您已经阅读了游戏规则"
+msgstr ""
+
+#: main.py:47
+msgid "2. 本游戏将会开启您的电脑的45678端口, 请确保您的电脑的45678端口未被占用"
+msgstr ""
+
+#: main.py:48
+msgid "3. 本游戏将会在您的电脑上开启一个HTTP服务器"
+msgstr ""
+
+#: main.py:49
+msgid "4. 本游戏将会在您的电脑中创建一些文件夹和文件"
+msgstr ""
+
+#: main.py:50
+msgid "5. 您可以在游玩本游戏的同时查看Github上的源代码, 但可能会影响游玩的体验"
+msgstr ""
+
+#: main.py:51
+msgid "6. 本游戏已在Github上开源, 如遇到bug, 请随时在Github上提交issue"
+msgstr ""
+
+#: main.py:52
+msgid "7. 如果您想查看本游戏的源代码, 请访问Github: https://github.com/Codete/PETC"
+msgstr ""
+
+#: main.py:53
+msgid "8. 如果您在游戏中遇到了困难, 可以查看Github上的教程"
+msgstr ""
+
+#: main.py:54
+msgid "9. 在一关结束后, 窗口会关闭, 请重新打开本游戏"
+msgstr ""
+
+#: main.py:55
+msgid "10. 祝您游戏愉快!"
+msgstr ""
+
+#: main.py:56
+msgid "11. 本提示将不会再次显示!!!!"
+msgstr ""
+
+#: main.py:63
+msgid "在读取提示词时遇到了错误: 无法识别的字符"
+msgstr ""
+
+#: main.py:65
+msgid "正在尝试恢复......"
+msgstr ""
+
+#: main.py:67
+msgid "错误: 未能完全修复提示词"
+msgstr ""
+
+#: main.py:74
+msgid "错误"
+msgstr ""
+
+#: main.py:75
+msgid "无法识别的字符"
+msgstr ""
+
+#: main.py:85
+msgid "在此处写下你的Token"
+msgstr ""
+
+#: main.py:91
+msgid "你的Token"
+msgstr ""
+
+#: main.py:98
+msgid "---------- 开发中, 敬请期待 ----------"
+msgstr ""

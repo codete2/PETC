@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../NOC/.idea/NOC.iml" filepath="$PROJECT_DIR$/../NOC/.idea/NOC.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PETC.iml" filepath="$PROJECT_DIR$/.idea/PETC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../XMP512/.idea/XMP512.iml" filepath="$PROJECT_DIR$/../XMP512/.idea/XMP512.iml" />
+      <module fileurl="file://E:/XMWProject/.idea/XMWProject.iml" filepath="E:/XMWProject/.idea/XMWProject.iml" />
     </modules>
   </component>
 </project>
