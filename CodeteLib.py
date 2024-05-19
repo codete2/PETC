@@ -30,11 +30,13 @@ gameTitle = """██████╗ ██████╗ ███████
    ██║   ╚██████╔╝    ╚██████╗╚██████╔╝██║ ╚████║   ██║   ██║██║ ╚████║╚██████╔╝███████╗██╗██╗██╗
    ╚═╝    ╚═════╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═╝╚═╝╚═╝"""
 CodeteLogo = """███████████
+█         █
 █ █████ █ █
 █ █ █   █ █   ╔═╗╔═╗╔╦╗╔═╗╔╦╗╔═╗       ╔═╗╔╦╗╔═╗
 █ █  █  █ █   ║  ║ ║ ║║║╣  ║ ║╣   ───  ╔═╝║║║╠╣ 
 █ █████ █ █   ╚═╝╚═╝═╩╝╚═╝ ╩ ╚═╝       ╚═╝╩ ╩╚ 
 █   █     █
+█         █
 ███████████"""
 languages = """Please choose your language 请选择您的语言：
 1. English
@@ -55,7 +57,7 @@ def getLanguage() -> str:
         user = input()
         cls()
         if user not in [str(i) for i in range(1, 7)]:
-            print("Invalid input, English will be used as your language", end='')
+            print("Invalid input, English will be used as your language.")
             s = input("Are you sure? (yes / no)")
             if s == "yes":
                 return "en"
@@ -106,10 +108,12 @@ def remove_line(fileName,lineToSkip):
             currentLine += 1
 
 # This function will change the level.
-def changeLevel(levelTo, dataFileName='data.petc', levelLine='2'):
-    remove_line(dataFileName, levelLine)
-    with open(dataFileName, 'a', encoding='utf-8') as data:
-        data.write('level={}'.format(levelTo))
+def changeLevel(levelTo, dataFileName='data.petc'):
+    with open(dataFileName, 'r', encoding='utf-8') as file:
+        lines = file.readlines()
+    lines[1] = f"level={levelTo}"
+    with open(dataFileName, 'w', encoding='utf-8') as file:
+        file.writelines(lines)
 
 def getIP():
     try:

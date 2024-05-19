@@ -17,7 +17,7 @@ cl.cls()
 # Settings
 if os.path.exists("data.petc") == False:
     with open("data.petc", "w", encoding="utf-8") as dataTemp:
-        userLang = [cl.getLanguage()]
+        userLang = cl.getLanguage()
         dataTemp.write("language={}\nlevel=0".format(userLang))
 with open("data.petc", "r", encoding="utf-8") as data1:
     d1 = data1.readlines()
@@ -26,7 +26,7 @@ with open("data.petc", "r", encoding="utf-8") as data1:
         data[d2.split("=")[0]] = d2.split("=")[1].replace("\n", "")
     userLang = data['language']
 
-lang = gettext.translation('PETCTrans', localedir='locales', languages=userLang)
+lang = gettext.translation('PETCTrans', localedir='.\\locales', languages=[userLang])
 lang.install('PETCTrans')
 _ = lang.gettext
 
@@ -76,19 +76,22 @@ elif data['level'] == '1':
         t.sleep(3)
 elif data['level'] == '2':
     cl.cls()
-    with open('TOKEN', 'r', encoding='utf-8') as tok:
+    if os.path.exists('TOKEN.here') == False:
+        with open('TOKEN.here', 'w+', encoding='utf-8') as toke:
+            toke.write(_("在此处写下你的Token"))
+    with open('TOKEN.here', 'r', encoding='utf-8') as tok:
         if cl.checkToken(tok.read()) == True:
             cl.changeLevel(3)
             input("Token Check OK!\nPress ENTER to continue...")
             sys.exit(0)
-    with open('TOKEN', 'w+', encoding='utf-8') as toke:
+    with open('TOKEN.here', 'w+', encoding='utf-8') as toke:
         toke.write(_("在此处写下你的Token"))
     class MyHandler(http.server.SimpleHTTPRequestHandler):
         def do_GET(self):
             self.send_response(200)
             self.send_header('Content-type', 'text/html')
             self.end_headers()
-            self.wfile.write(b'{}: {}'.format(_("你的Token"), cl.getToken()))
+            self.wfile.write(bytes("{}: {}".format(_("你的Token"), cl.getToken()).encode('utf-8')))
 
     with socketserver.TCPServer(("", 45678), MyHandler) as httpd:
         print("Server started at http://localhost:{}/".format(45678))
