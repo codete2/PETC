@@ -94,7 +94,6 @@ elif data['level'] == '2':
             self.wfile.write(bytes("{}: {}".format(_("你的Token"), cl.getToken()).encode('utf-8')))
 
     with socketserver.TCPServer(("", 45678), MyHandler) as httpd:
-        print("Server started at http://localhost:{}/".format(45678))
         httpd.serve_forever()
 else:
     cl.cls()
